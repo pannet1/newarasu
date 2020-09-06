@@ -1,0 +1,222 @@
+/* utils + styles + modules */
+.title {
+  margin: $space;
+  margin-top: 40px; // $space + 2em
+}
+
+/* for label less inputs */
+
+.hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* https://www.filamentgroup.com/lab/select-css.html */
+
+
+/* select */
+select {
+    display: block;
+    max-width: 100%;
+    border-radius: $micro-space;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right 0 top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select option {
+    font-weight: normal;
+}
+
+
+/* button class required for all buttons */
+button[class*=btn] {
+  padding: $space*3;
+  border: $outline solid $border-color;
+  border-radius: $micro-space;
+  background-color: $link-bg;
+  color: $link-color;
+  @include transition(0.5s);
+  &:focus,
+  &:hover {
+    background-color: $hover-bg;
+    color: $hover-color;
+    border: $outline solid $hover-color;
+  }
+}
+
+.link-button {
+  display: inline-block;
+  padding: $space;
+  background-color: $link-bg;
+  color: $link-color;
+}
+
+.btn__icon {
+    border: 0;
+    padding: $space;
+    background-color: $body-color;
+    color: $white;
+}
+
+button.close {
+  width: auto;
+  height: 1em;
+}
+
+.alert {
+  padding: $space;
+  margin: $space;
+  max-width: 100%;
+  font-weight: bold;
+  position: absolute;
+  top: 3em;
+  z-index: 999;
+  color: $white;
+}
+.alert-danger {
+  background-color: $danger;
+}
+.alert-danger {
+  background-color: $warning;
+}
+.alert-success {
+  background-color: $success;
+}
+/* toggle switch */
+
+// Pure CSS custom checkboxes.
+// Reference: https://css-tricks.com/snippets/css/custom-checkboxes-and-radio-buttons/
+// and: http://www.456bereastreet.com/archive/201211/accessible_custom_checkboxes_and_radio_buttons/
+.styled-checkbox {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+    &+label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+    }
+    // Box.
+    &+label:before {
+        content: '';
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 20px;
+        height: 20px;
+        background: $body-bg;
+        border: 1px solid $black;
+    }
+    // Box hover
+    &:hover+label:before {
+        background: $brand;
+    }
+    // Box focus
+    &:focus+label:before {
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+    // Box checked
+    &:checked+label:before {
+        background: $brand;
+    }
+    // Disabled state label.
+    &:disabled+label {
+        color: #b8b8b8;
+        cursor: auto;
+    }
+    // Disabled box.
+    &:disabled+label:before {
+        box-shadow: none;
+        background: #ddd;
+    }
+    // Checkmark. Could be replaced with an image
+    &:checked+label:after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 9px;
+        background: white;
+        width: 2px;
+        height: 2px;
+        box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+        transform: rotate(45deg);
+    }
+}
+
+
+/* width modifiers */
+
+.width-33 {
+    width: 33%;
+}
+
+.width-10 {
+    width: 10vw;
+}
+
+.width-40 {
+    width: 40vw;
+}
+
+
+/* color states */
+
+.success {
+    background-color: $success;
+}
+
+.danger {
+    background-color: $danger;
+}
+
+.warning {
+  background-color: $warning;
+}
+
+
+/* text alignment */
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+/* bootstrap pagination */
+.pagination {
+  li {
+    display: inline-block;
+    padding: $space;
+    border: 1px solid $brand;
+  }
+
+  .active {
+    background-color: $brand;
+
+    .page-link {
+      color: $white;
+    }
+  }
+}

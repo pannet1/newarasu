@@ -1,0 +1,206 @@
+/* base */
+/*
+rule order
+    Box
+    Border
+    Background
+    Text
+    Other
+*/
+
+/* https://css-tricks.com/solved-with-css-dropdown-menus/ */
+
+
+html {
+    box-sizing: border-box;
+    /* visibility: hidden; */
+    font-family: $base-font;
+    font-size: #{$base-font-size + '%'};
+    height: 100%;
+    background-color: $body-bg;
+    color: $body-color;
+}
+
+
+/* to avoid scrollbars */
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*
+* {
+    @include line-height(1);
+}
+*/
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+    font-feature-settings: "liga" on;
+    min-height: 100%;
+    /* needed for scrolling content to work */
+}
+
+h6 {
+    font-size: #{$base-font-size + ($base-font-size*.01) + '%'};
+}
+
+h5 {
+    font-size: #{$base-font-size + ($base-font-size* .03) + '%'};
+}
+
+h4 {
+    margin: $space;
+    font-size: #{$base-font-size + ($base-font-size* .08) + '%'};
+}
+
+h3 {
+    font-size: #{$base-font-size + ($base-font-size* .20) + '%'};
+    font-family: $heading-font;
+}
+
+h2 {
+    font-size: #{$base-font-size + ($base-font-size*.54) + '%'};
+}
+
+h1 {
+    font-size: #{$base-font-size + ($base-font-size*.68) + '%'};
+}
+
+/*img {
+    width: 100%;
+    height: auto;
+}*/
+
+a {
+    color: $link-bg;
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+li {
+  padding-bottom: $space;
+}
+fieldset {
+    border: 0;
+  }
+
+label {
+    margin: $space 0 -1*$micro-space 0;
+    color: $body-color;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    margin: 0 0 $micro-space*2 0;
+    padding: $micro-space*2;
+    border: solid $outline $border-color;
+    color: $body-color;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+        border: 0;
+        border: solid $outline $focus-color;
+    }
+}
+
+button {
+    line-height: 0;
+    cursor: pointer;
+}
+
+table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    display: table-row
+}
+
+thead {
+    display: table-header-group
+}
+
+tbody {
+    display: table-row-group
+}
+
+tfoot {
+    display: table-footer-group
+}
+
+col {
+    display: table-column
+}
+
+colgroup {
+    display: table-column-group
+}
+
+td,
+th {
+    display: table-cell
+}
+
+caption {
+    display: table-caption
+}
+
+
+/* end of general table style */
+
+
+/* table extra styling */
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid $body-color;
+    text-align: left;
+    padding: 8px;
+}
+
+tbody tr td {
+    text-align: left;
+}
+
+th {
+    background-color: $body-bg;
+    color: $body-color;
+}
+
+tr:nth-child(even) {
+    background-color: $white;
+}
+
+tr:nth-child(odd) {
+    background-color: $white;
+}
+
+tfoot tr td {
+    font-weight: bold;
+    select {
+        color: $body-color;
+        font-weight: bold;
+    }
+}
+
+
+/* end of table additional styling */
