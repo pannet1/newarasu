@@ -84,6 +84,7 @@
 
 
 .section-brand {
+  scroll-snap-align: start;
   display: flex;
   justify-content: flex-start;
   background-color: $brand;

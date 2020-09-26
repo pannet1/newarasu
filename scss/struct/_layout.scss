@@ -3,6 +3,9 @@
   background-color: $white;
   box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
   transition: margin-top 0.5s;
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  scroll-padding-top: 1px;
 
   .header {
     display: flex;

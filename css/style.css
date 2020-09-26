@@ -823,6 +823,9 @@ button.close {
   background-color: #ffffff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
   transition: margin-top 0.5s;
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  scroll-padding-top: 1px;
 }
 .wrapper .header {
   display: flex;
@@ -996,6 +999,7 @@ button.close {
 }
 
 .section-brand {
+  scroll-snap-align: start;
   display: flex;
   justify-content: flex-start;
   background-color: #bf1e2e;
