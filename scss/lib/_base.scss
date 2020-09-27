@@ -16,12 +16,7 @@ html {
     /* visibility: hidden; */
     font-family: $base-font;
     font-size: #{$base-font-size + '%'};
-    height: 100%;
-    background-color: $body-bg;
-    color: $body-color;
 }
-
-
 /* to avoid scrollbars */
 
 *,
@@ -43,20 +38,22 @@ body {
     -moz-font-feature-settings: "liga" on;
     font-feature-settings: "liga" on;
     min-height: 100%;
-    /* needed for scrolling content to work */   
+    /* needed for scrolling content to work */
 }
 
 h6 {
     font-size: #{$base-font-size + ($base-font-size*.01) + '%'};
+    font-family: $heading-font;
 }
 
 h5 {
     font-size: #{$base-font-size + ($base-font-size* .03) + '%'};
+    font-family: $heading-font;
 }
 
 h4 {
-    margin: $space;
     font-size: #{$base-font-size + ($base-font-size* .08) + '%'};
+    font-family: $heading-font;
 }
 
 h3 {
@@ -66,10 +63,12 @@ h3 {
 
 h2 {
     font-size: #{$base-font-size + ($base-font-size*.54) + '%'};
+    font-family: $heading-font;
 }
 
 h1 {
     font-size: #{$base-font-size + ($base-font-size*.68) + '%'};
+    font-family: $heading-font;
 }
 
 /*img {
@@ -86,7 +85,9 @@ ul {
     padding-left: 0;
     list-style: none;
 }
-
+li {
+   line-height: 1.25;
+}
 
 fieldset {
     border: 0;

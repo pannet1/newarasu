@@ -1,5 +1,8 @@
 
+/*** SECTIONS ****/
 
+
+/* home page */
 .carousel{
   position: relative;
   height: 800px;
@@ -82,29 +85,10 @@
   }
 }
 
-
-.section-brand {
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: flex-start;
-  background-color: $brand;
-  color: $compliment;
-  .picture{
+.menu {
+  margin: $space;
+  &__item {
     padding: $space;
-    flex-grow:1;
-    min-width: 50%;
-    img {
-      padding: $space;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  .para{
-    align-self: center;
-    text-align: justify;
-    padding: $space;
-    color: white;
-    flex-shrink: 1;
+    text-decoration: underline;
   }
 }

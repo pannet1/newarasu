@@ -51,9 +51,9 @@ $base-font: 'Quicksand',
 sans-serif;
 $heading-font: 'Lato',
 sans-serif;
-$base-font-size: 105; // Gets used as %
+$base-font-size: 115; // Gets used as %
 $base: ($base-font-size / 100); // We'll need this for some calculations
-$line-height: 1.2;
+$line-height: 1.35;
 $leading: $base * $line-height;
 // $space: .5em;
 $micro-space: 2px;
